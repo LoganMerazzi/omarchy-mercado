@@ -1,0 +1,51 @@
+{
+  "schemaVersion": 1,
+  "id": "logan.mercado",
+  "name": "Mercado",
+  "version": "1.0.0",
+  "author": "logan",
+  "license": "MIT",
+  "description": "Cotações de ações da B3, índices e moedas (Yahoo Finance) com o dólar na barra.",
+  "kinds": [
+    "bar-widget"
+  ],
+  "entryPoints": {
+    "barWidget": "Panel.qml"
+  },
+  "barWidget": {
+    "displayName": "Mercado",
+    "description": "Dólar na barra e painel com ações, índices e moedas.",
+    "category": "Info",
+    "allowMultiple": false,
+    "defaultSection": "center",
+    "defaults": {
+      "symbols": "USDBRL=X, ^BVSP, PETR4, VALE3, ITUB4",
+      "barSymbol": "USDBRL=X",
+      "refreshIntervalSec": 120
+    },
+    "schema": [
+      {
+        "key": "symbols",
+        "type": "string",
+        "label": "Ativos",
+        "defaultValue": "USDBRL=X, ^BVSP, PETR4, VALE3, ITUB4",
+        "description": "Símbolos do Yahoo Finance separados por vírgula. Tickers da B3 (PETR4) ganham .SA automaticamente."
+      },
+      {
+        "key": "barSymbol",
+        "type": "string",
+        "label": "Ativo exibido na barra",
+        "defaultValue": "USDBRL=X"
+      },
+      {
+        "key": "refreshIntervalSec",
+        "type": "integer",
+        "label": "Intervalo de atualização (segundos)",
+        "min": 60,
+        "max": 3600,
+        "step": 30,
+        "defaultValue": 120
+      }
+    ]
+  }
+}
