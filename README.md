@@ -2,6 +2,8 @@
 
 Plugin do [Omarchy shell](https://omarchy.org) com cotações do Yahoo Finance: um ativo na barra (o dólar, por padrão) e um painel com ações da B3, índices e moedas.
 
+![Mercado: o dólar na barra e o painel com Ibovespa e ações da B3](screenshots/mercado.png)
+
 ## Instalação
 
 ```bash
